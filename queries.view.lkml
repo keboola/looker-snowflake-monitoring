@@ -12,6 +12,11 @@ view: queries {
     sql: ${TABLE}.COMPILATION_TIME ;;
   }
 
+  dimension: query_text {
+    type: string
+    sql: ${TABLE}.QUERY_TEXT ;;
+  }
+
   dimension: database_name {
     type: string
     sql: ${TABLE}.DATABASE_NAME ;;
@@ -58,18 +63,33 @@ view: queries {
 
   dimension: queued_overload_time {
     type: number
+    description: "Time (in milliseconds) spent in the warehouse queue, due to the warehouse being overloaded by the current query workload."
+    sql: ${TABLE}.QUEUED_OVERLOAD_TIME ;;
+  }
+
+  measure: maximum_queued_overlad_time {
+    type: average
     sql: ${TABLE}.QUEUED_OVERLOAD_TIME ;;
   }
 
   dimension: queued_provisioning_time {
     type: number
+    description: "Time (in milliseconds) spent in the warehouse queue, waiting for the warehouse servers to provision, due to warehouse creation, resume, or resize."
+    sql: ${TABLE}.QUEUED_PROVISIONING_TIME ;;
+  }
+
+  measure: maximum_queued_provisioning_time {
+    type: average
     sql: ${TABLE}.QUEUED_PROVISIONING_TIME ;;
   }
 
   dimension: queued_repair_time {
     type: number
+    description: "Time (in milliseconds) spent in the warehouse queue, waiting for servers in the warehouse to be repaired."
     sql: ${TABLE}.QUEUED_REPAIR_TIME ;;
   }
+
+
 
   dimension: role_name {
     type: string
@@ -100,8 +120,13 @@ view: queries {
     sql: ${TABLE}.START_TIME ;;
   }
 
-  dimension: total_elapsed_time {
-    type: number
+  measure: average_total_elapsed_time {
+    type: average
+    sql: ${TABLE}.TOTAL_ELAPSED_TIME ;;
+  }
+
+  measure: maximum_total_elapsed_time {
+    type: max
     sql: ${TABLE}.TOTAL_ELAPSED_TIME ;;
   }
 
