@@ -40,6 +40,7 @@ view: legacy_jobs {
   measure: number_of_unique_projects {
     type: count_distinct
     sql: ${project_id} ;;
+    drill_fields: [detail*]
   }
 
   # ----- Sets of fields for drilling ------
