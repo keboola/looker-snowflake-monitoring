@@ -12,6 +12,11 @@ view: legacy_jobs {
     sql: ${TABLE}."component" ;;
   }
 
+  dimension: project_id {
+    type: string
+    sql: ${TABLE}."project_id" ;;
+  }
+
   dimension_group: createdTime {
     type: time
     timeframes: [
@@ -32,11 +37,17 @@ view: legacy_jobs {
     drill_fields: [detail*]
   }
 
+  measure: number_of_unique_projects {
+    type: count_distinct
+    sql: ${project_id} ;;
+  }
+
   # ----- Sets of fields for drilling ------
   set: detail {
     fields: [
       id,
-      component
+      component,
+      project_id
     ]
   }
 }

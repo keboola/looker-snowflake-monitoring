@@ -8,3 +8,4 @@ include: "*.dashboard"
 
 
 explore: queries {}
+explore: legacy_jobs {}
