@@ -122,6 +122,7 @@ view: queries {
 
   measure: average_total_elapsed_time {
     type: average
+    description: "Elapsed time (in milliseconds)"
     sql: ${TABLE}.TOTAL_ELAPSED_TIME ;;
   }
 
