@@ -130,6 +130,11 @@ view: queries_all {
     sql: ${TABLE}.TOTAL_ELAPSED_TIME ;;
   }
 
+  measure: median_total_elapsed_time {
+    type:  median
+    sql: ${TABLE}.TOTAL_ELAPSED_TIME ;;
+  }
+
   measure: maximum_total_elapsed_time {
     type: max
     sql: ${TABLE}.TOTAL_ELAPSED_TIME ;;
