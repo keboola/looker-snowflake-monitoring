@@ -10,3 +10,4 @@ include: "*.dashboard"
 explore: queries {}
 explore: legacy_jobs {}
 explore: queries_devel {}
+explore: queries_all {}
