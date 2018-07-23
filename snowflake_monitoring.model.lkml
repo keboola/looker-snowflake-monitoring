@@ -5,8 +5,4 @@ include: "*.view"
 
 
 
-
-explore: queries {}
-explore: legacy_jobs {}
-explore: queries_devel {}
 explore: queries_all {}
