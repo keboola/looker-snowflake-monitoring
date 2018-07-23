@@ -1,5 +1,5 @@
 view: queries_all {
-  sql_table_name: WORKSPACE_334794."queries_all" ;;
+  sql_table_name: WORKSPACE_904990."queries_all" ;;
 
   dimension: kbc_region {
     type: string
