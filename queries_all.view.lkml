@@ -32,6 +32,8 @@ view: queries_all {
     timeframes: [
       raw,
       time,
+      minute,
+      hour,
       date,
       week,
       month,
@@ -116,6 +118,8 @@ view: queries_all {
     timeframes: [
       raw,
       time,
+      minute,
+      hour,
       date,
       week,
       month,

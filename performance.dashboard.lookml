@@ -8,11 +8,11 @@
     explore: queries_all
     type: looker_area
     fields:
-    - queries_all.start_date
+    - queries_all.start_hour
     - queries_all.average_total_elapsed_time
     - queries_all.count
     fill_fields:
-    - queries_all.start_date
+    - queries_all.start_hour
     filters:
       queries_all.query_type: DROP^_USER
     sorts:
@@ -84,11 +84,11 @@
     explore: queries_all
     type: looker_area
     fields:
-    - queries_all.start_date
+    - queries_all.start_hour
     - queries_all.average_total_elapsed_time
     - queries_all.count
     fill_fields:
-    - queries_all.start_date
+    - queries_all.start_hour
     filters:
       queries_all.query_type: SHOW
     sorts:
@@ -160,11 +160,11 @@
     explore: queries_all
     type: looker_area
     fields:
-    - queries_all.start_date
+    - queries_all.start_hour
     - queries_all.average_total_elapsed_time
     - queries_all.count
     fill_fields:
-    - queries_all.start_date
+    - queries_all.start_hour
     filters:
       queries_all.query_type: CREATE^_USER
     sorts:
@@ -236,11 +236,11 @@
     explore: queries_all
     type: looker_area
     fields:
-    - queries_all.start_date
+    - queries_all.start_hour
     - queries_all.average_total_elapsed_time
     - queries_all.count
     fill_fields:
-    - queries_all.start_date
+    - queries_all.start_hour
     filters:
       queries_all.query_type: DROP^_ROLE
     sorts:
@@ -312,11 +312,11 @@
     explore: queries_all
     type: looker_area
     fields:
-    - queries_all.start_date
+    - queries_all.start_hour
     - queries_all.average_total_elapsed_time
     - queries_all.count
     fill_fields:
-    - queries_all.start_date
+    - queries_all.start_hour
     filters:
       queries_all.query_type: CREATE^_ROLE
     sorts:
@@ -388,11 +388,11 @@
     explore: queries_all
     type: looker_area
     fields:
-    - queries_all.start_date
+    - queries_all.start_hour
     - queries_all.average_total_elapsed_time
     - queries_all.count
     fill_fields:
-    - queries_all.start_date
+    - queries_all.start_hour
     filters:
       queries_all.query_type: INSERT
     sorts:
@@ -464,11 +464,11 @@
     explore: queries_all
     type: looker_area
     fields:
-    - queries_all.start_date
+    - queries_all.start_hour
     - queries_all.average_total_elapsed_time
     - queries_all.count
     fill_fields:
-    - queries_all.start_date
+    - queries_all.start_hour
     filters:
       queries_all.query_type: SELECT
     sorts:
@@ -540,11 +540,11 @@
     explore: queries_all
     type: looker_area
     fields:
-    - queries_all.start_date
+    - queries_all.start_hour
     - queries_all.average_total_elapsed_time
     - queries_all.count
     fill_fields:
-    - queries_all.start_date
+    - queries_all.start_hour
     filters:
       queries_all.query_type: ALTER
     sorts:
@@ -616,11 +616,11 @@
     explore: queries_all
     type: looker_area
     fields:
-    - queries_all.start_date
+    - queries_all.start_hour
     - queries_all.average_total_elapsed_time
     - queries_all.count
     fill_fields:
-    - queries_all.start_date
+    - queries_all.start_hour
     filters:
       queries_all.query_type: ALTER^_TABLE^_DROP^_COLUMN
     sorts:
@@ -692,11 +692,11 @@
     explore: queries_all
     type: looker_area
     fields:
-    - queries_all.start_date
+    - queries_all.start_hour
     - queries_all.average_total_elapsed_time
     - queries_all.count
     fill_fields:
-    - queries_all.start_date
+    - queries_all.start_hour
     filters:
       queries_all.query_type: ALTER^_TABLE^_ADD^_COLUMN
     sorts:
@@ -768,11 +768,11 @@
     explore: queries_all
     type: looker_area
     fields:
-    - queries_all.start_date
+    - queries_all.start_hour
     - queries_all.average_total_elapsed_time
     - queries_all.count
     fill_fields:
-    - queries_all.start_date
+    - queries_all.start_hour
     filters:
       queries_all.query_type: GRANT
     sorts:
@@ -844,11 +844,11 @@
     explore: queries_all
     type: looker_area
     fields:
-    - queries_all.start_date
+    - queries_all.start_hour
     - queries_all.average_total_elapsed_time
     - queries_all.count
     fill_fields:
-    - queries_all.start_date
+    - queries_all.start_hour
     filters:
       queries_all.query_type: CREATE
     sorts:
@@ -920,11 +920,11 @@
     explore: queries_all
     type: looker_area
     fields:
-    - queries_all.start_date
+    - queries_all.start_hour
     - queries_all.average_total_elapsed_time
     - queries_all.count
     fill_fields:
-    - queries_all.start_date
+    - queries_all.start_hour
     filters:
       queries_all.query_type: COPY
     sorts:
@@ -996,13 +996,13 @@
     explore: queries_all
     type: looker_column
     fields:
-    - queries_all.start_date
+    - queries_all.start_hour
     - queries_all.average_total_elapsed_time
     - queries_all.query_type
     pivots:
     - queries_all.query_type
     fill_fields:
-    - queries_all.start_date
+    - queries_all.start_hour
     sorts:
     - queries_all.start_date desc
     - queries_all.query_type
@@ -1045,11 +1045,11 @@
     explore: queries_all
     type: looker_area
     fields:
-    - queries_all.start_date
+    - queries_all.start_hour
     - queries_all.average_total_elapsed_time
     - queries_all.count
     fill_fields:
-    - queries_all.start_date
+    - queries_all.start_hour
     filters:
       queries_all.query_type: UNLOAD
     sorts:
@@ -1121,11 +1121,11 @@
     explore: queries_all
     type: looker_area
     fields:
-    - queries_all.start_date
+    - queries_all.start_hour
     - queries_all.average_total_elapsed_time
     - queries_all.count
     fill_fields:
-    - queries_all.start_date
+    - queries_all.start_hour
     filters:
       queries_all.query_type: RECLUSTER
     sorts:
