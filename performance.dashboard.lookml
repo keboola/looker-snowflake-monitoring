@@ -1,5 +1,5 @@
 - dashboard: performance
-  title: Performance
+  title: Snowflake Performance
   layout: newspaper
   elements:
   - title: DROP USER
