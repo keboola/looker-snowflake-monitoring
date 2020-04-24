@@ -1011,7 +1011,6 @@
     fields:
     - queries_all.start_hour
     - queries_all.average_total_elapsed_time
-    - queries_all.median_total_elapsed_time
     - queries_all.query_type
     pivots:
     - queries_all.query_type
