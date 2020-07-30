@@ -18,7 +18,7 @@
       queries_all.query_type: DROP^_USER
     sorts:
     - queries_all.start_date desc
-    limit: 500
+    limit: 5000
     stacking: ''
     show_value_labels: false
     label_density: 25
@@ -95,7 +95,7 @@
       queries_all.query_type: SHOW
     sorts:
     - queries_all.start_date desc
-    limit: 500
+    limit: 5000
     stacking: ''
     show_value_labels: false
     label_density: 25
@@ -172,7 +172,7 @@
       queries_all.query_type: CREATE^_USER
     sorts:
     - queries_all.start_date desc
-    limit: 500
+    limit: 5000
     stacking: ''
     show_value_labels: false
     label_density: 25
@@ -249,7 +249,7 @@
       queries_all.query_type: DROP^_ROLE
     sorts:
     - queries_all.start_date desc
-    limit: 500
+    limit: 5000
     stacking: ''
     show_value_labels: false
     label_density: 25
@@ -326,7 +326,7 @@
       queries_all.query_type: CREATE^_ROLE
     sorts:
     - queries_all.start_date desc
-    limit: 500
+    limit: 5000
     stacking: ''
     show_value_labels: false
     label_density: 25
@@ -403,7 +403,7 @@
       queries_all.query_type: INSERT
     sorts:
     - queries_all.start_date desc
-    limit: 500
+    limit: 5000
     stacking: ''
     show_value_labels: false
     label_density: 25
@@ -480,7 +480,7 @@
       queries_all.query_type: SELECT
     sorts:
     - queries_all.start_date desc
-    limit: 500
+    limit: 5000
     stacking: ''
     show_value_labels: false
     label_density: 25
@@ -557,7 +557,7 @@
       queries_all.query_type: ALTER
     sorts:
     - queries_all.start_date desc
-    limit: 500
+    limit: 5000
     stacking: ''
     show_value_labels: false
     label_density: 25
@@ -634,7 +634,7 @@
       queries_all.query_type: ALTER^_TABLE^_DROP^_COLUMN
     sorts:
     - queries_all.start_date desc
-    limit: 500
+    limit: 5000
     stacking: ''
     show_value_labels: false
     label_density: 25
@@ -711,7 +711,7 @@
       queries_all.query_type: ALTER^_TABLE^_ADD^_COLUMN
     sorts:
     - queries_all.start_date desc
-    limit: 500
+    limit: 5000
     stacking: ''
     show_value_labels: false
     label_density: 25
@@ -788,7 +788,7 @@
       queries_all.query_type: GRANT
     sorts:
     - queries_all.start_date desc
-    limit: 500
+    limit: 5000
     stacking: ''
     show_value_labels: false
     label_density: 25
@@ -865,7 +865,7 @@
       queries_all.query_type: CREATE
     sorts:
     - queries_all.start_date desc
-    limit: 500
+    limit: 5000
     stacking: ''
     show_value_labels: false
     label_density: 25
@@ -942,7 +942,7 @@
       queries_all.query_type: COPY
     sorts:
     - queries_all.start_date desc
-    limit: 500
+    limit: 5000
     stacking: ''
     show_value_labels: false
     label_density: 25
@@ -1019,7 +1019,7 @@
     sorts:
     - queries_all.start_date desc
     - queries_all.query_type
-    limit: 500
+    limit: 5000
     stacking: normal
     show_value_labels: false
     label_density: 25
@@ -1052,6 +1052,55 @@
     col: 0
     width: 24
     height: 11
+  - title: Queries count
+    name: Queries count
+    model: snowflake_monitoring
+    explore: queries_all
+    type: looker_area
+    fields:
+    - queries_all.start_hour
+    - queries_all.count
+#    - queries_all.query_type
+    #pivots:
+    #- queries_all.query_type
+    fill_fields:
+    - queries_all.start_hour
+    sorts:
+    - queries_all.start_date desc
+    - queries_all.query_type
+    limit: 5000
+    #stacking: normal
+    show_value_labels: false
+    label_density: 25
+    legend_position: center
+    x_axis_gridlines: false
+    y_axis_gridlines: true
+    show_view_names: true
+    point_style: none
+    limit_displayed_rows: false
+    y_axis_combined: true
+    show_y_axis_labels: true
+    show_y_axis_ticks: true
+    y_axis_tick_density: default
+    y_axis_tick_density_custom: 5
+    show_x_axis_label: true
+    show_x_axis_ticks: true
+    x_axis_scale: auto
+    y_axis_scale_mode: linear
+    x_axis_reversed: false
+    y_axis_reversed: false
+    ordering: none
+    show_null_labels: false
+    show_totals_labels: false
+    show_silhouette: false
+    totals_color: "#808080"
+    listen:
+      Region: queries_all.kbc_region
+      Date: queries_all.start_date
+    row: 99
+    col: 0
+    width: 24
+    height: 11
   - title: UNLOAD
     name: UNLOAD
     model: snowflake_monitoring
@@ -1068,7 +1117,7 @@
       queries_all.query_type: UNLOAD
     sorts:
     - queries_all.start_date desc
-    limit: 500
+    limit: 5000
     stacking: ''
     show_value_labels: false
     label_density: 25
@@ -1145,7 +1194,7 @@
       queries_all.query_type: RECLUSTER
     sorts:
     - queries_all.start_date desc
-    limit: 500
+    limit: 5000
     stacking: ''
     show_value_labels: false
     label_density: 25
