@@ -58,6 +58,11 @@ view: queries_all {
     sql: ${TABLE}.EXECUTION_TIME ;;
   }
 
+  measure: median_execution_time {
+    type: median
+    sql: ${TABLE}.EXECUTION_TIME ;;
+  }
+
   dimension: query_tag {
     type: string
     sql: ${TABLE}.QUERY_TAG ;;
@@ -74,8 +79,14 @@ view: queries_all {
     sql: ${TABLE}.QUEUED_OVERLOAD_TIME ;;
   }
 
+
   measure: maximum_queued_overlad_time {
     type: average
+    sql: ${TABLE}.QUEUED_OVERLOAD_TIME ;;
+  }
+
+  measure: median_queued_overlad_time {
+    type: median
     sql: ${TABLE}.QUEUED_OVERLOAD_TIME ;;
   }
 
@@ -90,13 +101,21 @@ view: queries_all {
     sql: ${TABLE}.QUEUED_PROVISIONING_TIME ;;
   }
 
+  measure: median_queued_provisioning_time {
+    type: median
+    sql: ${TABLE}.QUEUED_PROVISIONING_TIME ;;
+  }
+
   dimension: queued_repair_time {
     type: number
     description: "Time (in milliseconds) spent in the warehouse queue, waiting for servers in the warehouse to be repaired."
     sql: ${TABLE}.QUEUED_REPAIR_TIME ;;
   }
 
-
+  measure: median_queued_repair_time {
+    type: median
+    sql: ${TABLE}.QUEUED_REPAIR_TIME ;;
+  }
 
   dimension: role_name {
     type: string
